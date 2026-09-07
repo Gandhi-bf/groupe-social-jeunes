@@ -4,10 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Formulaire de consultation - Groupe Social des Jeunes</title>
+
 <style>
 * {
 box-sizing: border-box;
 }
+
 body {
 margin: 0;
 padding: 20px;
@@ -16,6 +18,7 @@ background: #f3f5f7;
 color: #222;
 line-height: 1.5;
 }
+
 .container {
 max-width: 850px;
 margin: auto;
@@ -24,23 +27,37 @@ padding: 25px;
 border-radius: 14px;
 box-shadow: 0 3px 15px rgba(0,0,0,0.10);
 }
+
 .header {
 text-align: center;
 margin-bottom: 30px;
 }
+
+.group-image {
+width: 100%;
+max-width: 700px;
+height: 220px;
+object-fit: cover;
+border-radius: 12px;
+margin-bottom: 20px;
+}
+
 .header h1 {
 color: #174a7e;
 font-size: 25px;
 margin-bottom: 8px;
 }
+
 .header h2 {
 font-size: 18px;
 margin: 5px 0;
 }
+
 .header p {
 color: #555;
 font-size: 15px;
 }
+
 .section {
 margin-top: 30px;
 padding: 20px;
@@ -48,6 +65,7 @@ border: 1px solid #ddd;
 border-radius: 10px;
 background: #fafafa;
 }
+
 .section h2 {
 color: #174a7e;
 font-size: 20px;
@@ -55,29 +73,35 @@ margin-top: 0;
 border-bottom: 2px solid #174a7e;
 padding-bottom: 8px;
 }
+
 .question {
 margin-top: 22px;
 margin-bottom: 20px;
 }
+
 .question-title {
 font-weight: bold;
 margin-bottom: 10px;
 }
+
 .instruction {
 font-size: 14px;
 color: #666;
 font-style: italic;
 margin-bottom: 10px;
 }
+
 label {
 display: block;
 margin: 9px 0;
 padding: 8px;
 border-radius: 6px;
 }
+
 label:hover {
 background: #eef4f9;
 }
+
 input[type="text"],
 textarea {
 width: 100%;
@@ -87,26 +111,32 @@ border-radius: 7px;
 font-size: 15px;
 font-family: Arial, sans-serif;
 }
+
 textarea {
 min-height: 120px;
 resize: vertical;
 }
+
 .small-textarea {
 min-height: 70px;
 }
+
 .numbered-answer {
 margin-bottom: 10px;
 }
+
 .numbered-answer input {
 width: 100%;
 padding: 10px;
 border: 1px solid #bbb;
 border-radius: 7px;
 }
+
 .submit-area {
 text-align: center;
 margin-top: 35px;
 }
+
 button {
 background: #174a7e;
 color: white;
@@ -116,9 +146,11 @@ border-radius: 8px;
 font-size: 16px;
 cursor: pointer;
 }
+
 button:hover {
 background: #12395f;
 }
+
 .thank-you {
 display: none;
 text-align: center;
@@ -130,529 +162,818 @@ border-radius: 10px;
 color: #245b28;
 font-weight: bold;
 }
+
 .footer {
 text-align: center;
 margin-top: 30px;
 color: #666;
 font-size: 14px;
 }
+
 @media (max-width: 600px) {
 body {
 padding: 10px;
 }
+
 .container {
 padding: 15px;
 }
+
 .header h1 {
 font-size: 21px;
 }
+
 .section {
 padding: 15px;
 }
+
 .section h2 {
 font-size: 18px;
+}
+
+.group-image {
+height: 180px;
 }
 }
 </style>
 </head>
+
 <body>
+
 <div class="container">
+
 <div class="header">
+
+<img src="image-groupe.jpg"
+alt="Groupe Social des Jeunes"
+class="group-image">
+
 <h1>📋 FORMULAIRE DE CONSULTATION DES MEMBRES</h1>
+
 <h2>Groupe Social des Jeunes</h2>
+
 <h2>Paroisse Saint Thomas</h2>
+
 <p>
 Ce formulaire a pour objectif de recueillir les avis et propositions
 des membres afin de mieux définir le fonctionnement et les priorités
 du groupe, principalement en faveur des jeunes de la paroisse.
 </p>
+
 </div>
+
 <form id="consultationForm">
+
 <!-- 1. INFORMATIONS DU MEMBRE -->
+
 <div class="section">
+
 <h2>1. Informations du membre</h2>
+
 <div class="question">
+
 <div class="question-title">
 Nom et prénom :
 </div>
+
 <input type="text" name="nom_prenom" required>
+
 </div>
+
 <div class="question">
+
 <div class="question-title">
 Dans quelle communauté êtes-vous membre ?
 </div>
+
 <label>
 <input type="radio" name="communaute" value="Saint Paul" required>
 Saint Paul
 </label>
+
 <label>
 <input type="radio" name="communaute" value="Saint Charles Lwanga">
 Saint Charles Lwanga
 </label>
+
 <label>
 <input type="radio" name="communaute" value="Sainte Catherine">
 Sainte Catherine
 </label>
+
 <label>
 <input type="radio" name="communaute" value="Sainte Marie">
 Sainte Marie
 </label>
+
 <label>
 <input type="radio" name="communaute" value="Saint Pierre">
 Saint Pierre
 </label>
+
 </div>
 </div>
+
+
 <!-- 2. OBJECTIFS ET ORIENTATIONS -->
+
 <div class="section">
+
 <h2>2. Objectifs et orientations du groupe</h2>
+
 <div class="question">
+
 <div class="question-title">
 Quels objectifs souhaiteriez-vous que notre groupe poursuive ?
 </div>
+
 <div class="instruction">
 Vous pouvez cocher plusieurs réponses.
 </div>
+
 <label>
 <input type="checkbox" name="objectifs[]" value="Soutenir les jeunes en difficulté">
 Soutenir les jeunes en difficulté
 </label>
+
 <label>
 <input type="checkbox" name="objectifs[]" value="Soutenir ou encourager les jeunes dans les moments de joie">
 Soutenir ou encourager les jeunes dans les moments de joie
 </label>
+
 <label>
 <input type="checkbox" name="objectifs[]" value="Créer des sources de revenus en dehors des quêtes mensuelles">
 Créer des sources de revenus en dehors des quêtes mensuelles
 </label>
+
 <label>
 <input type="checkbox" name="objectifs[]" value="Aider la pastorale des jeunes">
 Aider la pastorale des jeunes
 </label>
+
 <label>
 <input type="checkbox" name="objectifs[]" value="Soutenir la paroisse dans ses projets">
 Soutenir la paroisse dans ses projets
 </label>
+
 <label>
 <input type="checkbox" name="objectifs[]" value="Aider les orphelins en situation de grande vulnérabilité">
 Aider les orphelins en situation de grande vulnérabilité
 </label>
+
 <label>
 <input type="checkbox" name="objectifs[]" value="Aider les personnes âgées en situation de vulnérabilité">
 Aider les personnes âgées en situation de vulnérabilité
 </label>
+
 <label>
 <input type="checkbox" name="objectifs[]" value="Aider les personnes détenues">
 Aider les personnes détenues
 </label>
+
 <label>
 <input type="checkbox" name="objectifs[]" value="Avoir un jour des fêtes entre nous">
 Avoir un jour des fêtes entre nous
 </label>
+
 <label>
 <input type="checkbox" name="objectifs[]" value="Autre">
 Autre
 </label>
+
 </div>
+
+
 <div class="question">
+
 <div class="question-title">
 Dans quels moments de difficulté pensez-vous que les jeunes pourraient avoir besoin de notre soutien ?
 </div>
+
 <div class="numbered-answer">
 1. <input type="text" name="difficulte_1">
 </div>
+
 <div class="numbered-answer">
 2. <input type="text" name="difficulte_2">
 </div>
+
 </div>
+
+
 <div class="question">
+
 <div class="question-title">
 Dans quels moments de joie pensez-vous que nous pourrions soutenir ou encourager les jeunes ?
 </div>
+
 <div class="numbered-answer">
 1. <input type="text" name="joie_1">
 </div>
+
 <div class="numbered-answer">
 2. <input type="text" name="joie_2">
 </div>
+
 </div>
+
+
+<!-- ACTIVITES A PRIVILEGIER -->
+
 <div class="question">
+
 <div class="question-title">
 Quelles activités souhaiteriez-vous que le groupe privilégie ?
 </div>
-<label>
-<input type="checkbox" name="activites[]" value="Activités sociales et caritatives">
-Activités sociales et caritatives
-</label>
-<label>
-<input type="checkbox" name="activites[]" value="Activités spirituelles">
-Activités spirituelles
-</label>
-<label>
-<input type="checkbox" name="activites[]" value="Activités de formation">
-Activités de formation
-</label>
-<label>
-<input type="checkbox" name="activites[]" value="Activités récréatives">
-Activités récréatives
-</label>
-<label>
-<input type="checkbox" name="activites[]" value="Activités génératrices de revenus">
-Activités génératrices de revenus
-</label>
-<label>
-<input type="checkbox" name="activites[]" value="Autre">
-Autre
-</label>
+
+<div class="instruction">
+Votre proposition :
 </div>
-<!-- ACTIVITE PRODUCTIVE AJOUTEE -->
+
+<textarea
+name="activites_sociales"
+placeholder="Écrivez ici les activités sociales que vous souhaiteriez voir le groupe privilégier..."></textarea>
+
+</div>
+
+
+<!-- ACTIVITE PRODUCTIVE -->
+
 <div class="question">
+
 <div class="question-title">
 Avez-vous une idée d’une activité productive qui pourrait générer des revenus pour le groupe ?
 </div>
+
+<div class="instruction">
+Vous pouvez cocher plusieurs réponses.
+</div>
+
 <label>
 <input type="checkbox" name="activite_productive[]" value="Agriculture ou maraîchage">
 Agriculture ou maraîchage
 </label>
+
 <label>
 <input type="checkbox" name="activite_productive[]" value="Élevage">
 Élevage
 </label>
+
 <label>
 <input type="checkbox" name="activite_productive[]" value="Petit commerce">
 Petit commerce
 </label>
+
 <label>
 <input type="checkbox" name="activite_productive[]" value="Transformation de produits">
 Transformation de produits
 </label>
+
 <label>
 <input type="checkbox" name="activite_productive[]" value="Artisanat">
 Artisanat
 </label>
+
 <label>
 <input type="checkbox" name="activite_productive[]" value="Prestations de services">
 Prestations de services
 </label>
+
 <label>
 <input type="checkbox" name="activite_productive[]" value="Autre">
 Autre
 </label>
+
 </div>
+
 </div>
+
+
 <!-- 3. BENEFICIAIRES -->
+
 <div class="section">
+
 <h2>3. Les bénéficiaires</h2>
+
 <div class="question">
+
 <div class="question-title">
 Parmi les bénéficiaires suivants, lesquels devraient être prioritaires pour notre groupe ?
 </div>
+
 <div class="instruction">
 Veuillez choisir au maximum 3 réponses.
 </div>
+
 <label>
 <input type="checkbox" name="beneficiaires[]" value="Jeunes maladie grave">
 Jeunes de la paroisse confrontés à une maladie grave ou à une hospitalisation
 </label>
+
 <label>
 <input type="checkbox" name="beneficiaires[]" value="Jeunes deuil">
 Jeunes de la paroisse confrontés à un deuil
 </label>
+
 <label>
 <input type="checkbox" name="beneficiaires[]" value="Jeunes situation familiale grave">
 Jeunes de la paroisse confrontés à une situation familiale grave
 </label>
+
 <label>
 <input type="checkbox" name="beneficiaires[]" value="Jeunes sinistre">
 Jeunes de la paroisse victimes d’un sinistre
 </label>
+
 <label>
 <input type="checkbox" name="beneficiaires[]" value="Jeunes moments joie">
 Jeunes de la paroisse dans des moments de joie
 </label>
+
 <label>
 <input type="checkbox" name="beneficiaires[]" value="Orphelins">
 Orphelins en situation de grande vulnérabilité
 </label>
+
 <label>
 <input type="checkbox" name="beneficiaires[]" value="Personnes âgées">
 Personnes âgées en situation de vulnérabilité
 </label>
+
 <label>
 <input type="checkbox" name="beneficiaires[]" value="Personnes détenues">
 Personnes détenues
 </label>
+
 <label>
 <input type="checkbox" name="beneficiaires[]" value="Autre">
 Autre
 </label>
+
 </div>
 </div>
+
+
 <!-- 4. TRANSPARENCE -->
+
 <div class="section">
+
 <h2>4. Comment assurer la transparence ?</h2>
+
 <div class="question">
+
 <div class="question-title">
 Êtes-vous disposé(e) à respecter la contribution mensuelle de 5 000 FC ?
 </div>
+
 <label>
 <input type="radio" name="contribution" value="Oui" required>
 Oui
 </label>
+
 <label>
 <input type="radio" name="contribution" value="Non">
 Non
 </label>
+
 </div>
+
+
 <div class="question">
+
 <div class="question-title">
 Quelles mesures permettraient d’assurer une bonne transparence dans la gestion du groupe ?
 </div>
+
 <div class="instruction">
 Vous pouvez cocher plusieurs réponses.
 </div>
+
 <label>
 <input type="checkbox" name="transparence[]" value="Bilan cotisations dépenses">
 Présenter régulièrement un bilan des cotisations et des dépenses
 </label>
+
 <label>
 <input type="checkbox" name="transparence[]" value="Informer avant dépense importante">
 Informer les membres avant toute dépense importante
 </label>
+
 <label>
 <input type="checkbox" name="transparence[]" value="Justificatifs">
 Conserver les justificatifs des dépenses
 </label>
+
 <label>
 <input type="checkbox" name="transparence[]" value="Compte rendu financier">
 Présenter régulièrement un compte rendu de la gestion financière
 </label>
+
 <label>
 <input type="checkbox" name="transparence[]" value="Questions membres">
 Permettre aux membres de poser des questions sur la gestion financière
 </label>
+
 <label>
 <input type="checkbox" name="transparence[]" value="Autre">
 Autre
 </label>
+
 </div>
 </div>
+
+
 <!-- 5. REGLEMENT -->
+
 <div class="section">
+
 <h2>5. Règlement intérieur et discipline</h2>
+
 <div class="question">
+
 <div class="question-title">
 Que devrait-on faire si un membre ne cotise pas ?
 </div>
+
 <label>
 <input type="checkbox" name="non_cotisation[]" value="Rappel engagement">
 Lui rappeler son engagement
 </label>
+
 <label>
 <input type="checkbox" name="non_cotisation[]" value="Comprendre situation">
 Chercher d'abord à comprendre sa situation
 </label>
+
 <label>
 <input type="checkbox" name="non_cotisation[]" value="Accorder délai">
 Accorder un délai
 </label>
+
 <label>
 <input type="checkbox" name="non_cotisation[]" value="Retrait après rappels">
 Après plusieurs rappels restés sans suite, le membre pourra être retiré du groupe
 </label>
+
 </div>
+
+
 <div class="question">
+
 <div class="question-title">
 Que faire en cas d'absences répétées sans justification ?
 </div>
+
 <label>
 <input type="radio" name="absences" value="Simple rappel" required>
 Simple rappel
 </label>
+
 <label>
 <input type="radio" name="absences" value="Avertissement">
 Avertissement
 </label>
+
 <label>
 <input type="radio" name="absences" value="Suspension temporaire">
 Suspension temporaire
 </label>
+
 </div>
+
+
 <div class="question">
+
 <div class="question-title">
 Faut-il prévoir des sanctions en cas de non-respect du règlement ?
 </div>
+
 <label>
 <input type="radio" name="sanctions" value="Oui" required>
 Oui
 </label>
+
 <label>
 <input type="radio" name="sanctions" value="Non">
 Non
 </label>
+
 <label>
 <input type="radio" name="sanctions" value="Oui cas graves ou répétés">
 Oui, mais seulement pour les cas graves ou répétés
 </label>
+
 </div>
+
+
 <div class="question">
+
 <div class="question-title">
 Qui devrait décider d'une sanction ?
 </div>
+
 <label>
 <input type="radio" name="decision_sanction" value="Président" required>
 Le président
 </label>
+
 <label>
 <input type="radio" name="decision_sanction" value="Comité">
 Le comité
 </label>
+
 <label>
 <input type="radio" name="decision_sanction" value="Comité après consultation">
 Le comité après consultation du membre concerné
 </label>
+
 <label>
 <input type="radio" name="decision_sanction" value="Ensemble des membres">
 L'ensemble des membres
 </label>
+
 </div>
 </div>
+
+
 <!-- 6. ORGANISATION -->
+
 <div class="section">
+
 <h2>🏛️ 6. Organisation</h2>
+
 <div class="question">
+
 <div class="question-title">
 Quels responsables devraient exister ?
 </div>
+
 <div class="instruction">
 Plusieurs choix possibles.
 </div>
+
 <label>
 <input type="checkbox" name="responsables[]" value="Président">
 Président
 </label>
+
 <label>
 <input type="checkbox" name="responsables[]" value="Vice-président">
 Vice-président
 </label>
+
 <label>
 <input type="checkbox" name="responsables[]" value="Secrétaire">
 Secrétaire
 </label>
+
 <label>
 <input type="checkbox" name="responsables[]" value="Trésorier">
 Trésorier
 </label>
+
 <label>
 <input type="checkbox" name="responsables[]" value="Autre">
 Autre
 </label>
+
 </div>
+
+
 <div class="question">
+
 <div class="question-title">
 Comment choisir les responsables ?
 </div>
+
 <label>
 <input type="radio" name="choix_responsables" value="Élection" required>
 Élection par les membres
 </label>
+
 <label>
 <input type="radio" name="choix_responsables" value="Nomination">
 Nomination
 </label>
+
 <label>
 <input type="radio" name="choix_responsables" value="Proposition validation">
 Proposition puis validation par les membres
 </label>
+
 </div>
+
+
 <div class="question">
+
 <div class="question-title">
 Quelle durée pour un mandat ?
 </div>
+
 <label>
 <input type="radio" name="mandat" value="1 an" required>
 1 an
 </label>
+
 <label>
 <input type="radio" name="mandat" value="2 ans">
 2 ans
 </label>
+
 <label>
 <input type="radio" name="mandat" value="3 ans">
 3 ans
 </label>
+
 </div>
 </div>
+
+
 <!-- 7. FONCTIONNEMENT -->
+
 <div class="section">
+
 <h2>📅 7. Fonctionnement</h2>
+
 <div class="question">
+
 <div class="question-title">
 À quelle fréquence devrions-nous nous réunir ?
 </div>
+
 <label>
 <input type="radio" name="frequence" value="Chaque semaine" required>
 Chaque semaine
 </label>
+
 <label>
 <input type="radio" name="frequence" value="Deux fois par mois">
 Deux fois par mois
 </label>
+
 <label>
 <input type="radio" name="frequence" value="Une fois par mois">
 Une fois par mois
 </label>
+
 <label>
 <input type="radio" name="frequence" value="Selon les besoins">
 Selon les besoins
 </label>
+
 </div>
+
+
 <div class="question">
+
 <div class="question-title">
 Quel jour convient le mieux ?
 </div>
+
 <label>
 <input type="radio" name="jour" value="Samedi" required>
 Samedi
 </label>
+
 <label>
 <input type="radio" name="jour" value="Dimanche">
 Dimanche
 </label>
+
 <label>
 <input type="radio" name="jour" value="Autre jour">
 Autre jour
 </label>
+
 </div>
 </div>
+
+
 <!-- 8. REMARQUES ET SUGGESTIONS -->
+
 <div class="section">
+
 <h2>💡 8. Remarques et suggestions</h2>
+
 <div class="question">
+
 <div class="question-title">
 Avez-vous des suggestions ou des remarques particulières pour l'amélioration du groupe ?
 </div>
-<textarea name="remarques" placeholder="Saisissez vos remarques ou suggestions ici..."></textarea>
+
+<textarea name="remarques"
+placeholder="Saisissez vos remarques ou suggestions ici..."></textarea>
+
 </div>
 </div>
+
+
 <!-- BOUTON DE SOUMISSION -->
+
 <div class="submit-area">
-<button type="submit">Envoyer le formulaire</button>
+
+<button type="submit">
+Envoyer le formulaire
+</button>
+
 </div>
+
 </form>
+
+
 <div id="thankYouMessage" class="thank-you">
+
 Merci pour votre participation ! Vos réponses ont bien été enregistrées.
+
 </div>
+
+
 <div class="footer">
+
 <p>© Groupe Social des Jeunes - Paroisse Saint Thomas</p>
+
 </div>
+
 </div>
+
+
 <script>
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbydRbaRjVjU5dyEeX1eHX7DGr1xxA8fU7eMijAeOjMz5tS6k9kjRprA5_8kweTSaPCT0Q/exec";
+
 document.getElementById('consultationForm').addEventListener('submit', function(e) {
+
 e.preventDefault();
-this.style.display = 'none';
-document.getElementById('thankYouMessage').style.display = 'block';
+
+const form = this;
+const formData = new FormData(form);
+const data = {};
+
+formData.forEach((value, key) => {
+
+if (key.endsWith('[]')) {
+
+const cleanKey = key.slice(0, -2);
+
+if (!data[cleanKey]) data[cleanKey] = [];
+
+data[cleanKey].push(value);
+
+} else {
+
+data[key] = value;
+
+}
+
 });
+
+Object.keys(data).forEach(key => {
+
+if (Array.isArray(data[key])) {
+
+data[key] = data[key].join(", ");
+
+}
+
+});
+
+
+fetch(scriptURL, {
+
+method: "POST",
+body: JSON.stringify(data)
+
+})
+
+.then(response => response.json())
+
+.then(result => {
+
+if (result.success) {
+
+form.style.display = 'none';
+
+document.getElementById('thankYouMessage').style.display = 'block';
+
+} else {
+
+alert("Une erreur est survenue lors de l'envoi.");
+
+}
+
+})
+
+.catch(error => {
+
+console.error(error);
+
+alert("Impossible d'envoyer le formulaire. Vérifiez votre connexion.");
+
+});
+
+});
+
 </script>
+
 </body>
-</html> 
+</html>
