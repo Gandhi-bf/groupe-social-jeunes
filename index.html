@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Formulaire de consultation - Groupe de solidarité</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+      text-align: center;
+      color: #1b5e20;
+      font-size: 25px;
+    }
+
+    .intro {
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      background: #1b5e20;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 19px;
+      margin-top: 30px;
+    }
+
+    .question {
+      margin: 20px 0;
+    }
+
+    .question label:first-child {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    label.option {
+      display: block;
+      margin: 9px 0;
+      font-weight: normal;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 11px;
+      margin-top: 7px;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .button {
+      width: 100%;
+      padding: 14px;
+      background: #1b5e20;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background: #144b18;
+    }
+
+    .note {
+      background: #fff8e1;
+      padding: 12px;
+      border-left: 5px solid #ffb300;
+      border-radius: 5px;
+      margin-top: 15px;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 13px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>🤝 Formulaire de consultation</h1>
+
+  <p class="intro">
+    <strong>Groupe de solidarité des jeunes</strong><br>
+    Paroisse Saint Thomas
+    <br><br>
+    Ce formulaire nous permet de recueillir les avis, les idées et les propositions
+    de chaque membre afin d'améliorer l'organisation et le fonctionnement de notre groupe.
+  </p>
+
+  <div class="note">
+    🙏 Merci de répondre sincèrement à toutes les questions.
+    Vos réponses nous aideront à construire ensemble un groupe plus organisé,
+    solidaire et efficace.
+  </div>
+
+  <form>
+
+    <!-- 1. INFORMATIONS DU MEMBRE -->
+
+    <h2>1. Informations du membre</h2>
+
+    <div class="question">
+      <label>Nom et postnom</label>
+      <input type="text" name="nom" placeholder="Votre nom et postnom">
+    </div>
+
+    <div class="question">
+      <label>Votre communauté</label>
+
+      <select name="communaute">
+        <option value="">-- Choisissez votre communauté --</option>
+        <option>Saint Pierre</option>
+        <option>Saint Thomas</option>
+        <option>Autre</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label>Êtes-vous favorable à la mise en place d'une œuvre de solidarité au sein du groupe ?</label>
+
+      <label class="option">
+        <input type="radio" name="favorable" value="Oui">
+        Oui
+      </label>
+
+      <label class="option">
+        <input type="radio" name="favorable" value="Non">
+        Non
+      </label>
+
+      <label class="option">
+        <input type="radio" name="favorable" value="Pas encore décidé">
+        Pas encore décidé
+      </label>
+    </div>
+
+
+    <!-- 2. OBJECTIFS -->
+
+    <h2>2. Vision et objectifs du groupe</h2>
+
+    <div class="question">
+      <label>Selon vous, quels devraient être les principaux objectifs de notre groupe ?</label>
+
+      <label class="option">
+        <input type="checkbox" name="objectifs" value="Aide aux personnes vulnérables">
+        Aider les personnes vulnérables
+      </label>
+
+      <label class="option">
+        <input type="checkbox" name="objectifs" value="Solidarité entre membres">
+        Renforcer la solidarité entre les membres
+      </label>
+
+      <label class="option">
+        <input type="checkbox" name="objectifs" value="Aide aux jeunes">
+        Soutenir les jeunes en difficulté
+      </label>
+
+      <label class="option">
+        <input type="checkbox" name="objectifs" value="Activités génératrices de revenus">
+        Mettre en place des activités génératrices de revenus
+      </label>
+
+      <label class="option">
+        <input type="checkbox" name="objectifs" value="Autre">
+        Autre
+      </label>
+    </div>
+
+
+    <!-- 3. BENEFICIAIRES -->
+
+    <h2>3. Personnes concernées par notre œuvre de charité</h2>
+
+    <div class="question">
+      <label>Selon vous, quelles personnes devraient être prioritaires ?</label>
+
+      <label class="option">
+        <input type="checkbox" name="beneficiaires" value="Orphelins">
+        Les orphelins
+      </label>
+
+      <label class="option">
+        <input type="checkbox" name="beneficiaires" value="Personnes âgées">
+        Les personnes âgées
+      </label>
+
+      <label class="option">
+        <input type="checkbox" name="beneficiaires" value="Malades">
+        Les personnes malades
+      </label>
+
+      <label class="option">
+        <input type="checkbox" name="beneficiaires" value="Familles en difficulté">
+        Les familles en difficulté
+      </label>
+
+      <label class="option">
+        <input type="checkbox" name="beneficiaires" value="Enfants vulnérables">
+        Les enfants vulnérables
+      </label>
+
+      <label class="option">
+        <input type="checkbox" name="beneficiaires" value="Autre">
+        Autre
+      </label>
+    </div>
+
+
+    <!-- 4. ACTIVITE PRODUCTIVE -->
+
+    <h2>4. Activité productive</h2>
+
+    <div class="question">
+      <label>
+        Avez-vous une idée d'une activité productive qui pourrait générer des revenus pour le groupe ?
+      </label>
+
+      <label class="option">
+        <input type="radio" name="idee_activite" value="Oui">
+        Oui
+      </label>
+
+      <label class="option">
+        <input type="radio" name="idee_activite" value="Non">
+        Non
+      </label>
+    </div>
+
+    <div class="question">
+      <label>
+        Si oui, quelle activité proposez-vous ?
+      </label>
+
+      <textarea name="activite" placeholder="Écrivez votre idée ici..."></textarea>
+    </div>
+
+
+    <!-- 5. CONTRIBUTIONS -->
+
+    <h2>5. Contributions et gestion financière</h2>
+
+    <div class="question">
+      <label>Êtes-vous disposé(e) à contribuer financièrement aux activités du groupe ?</label>
+
+      <label class="option">
+        <input type="radio" name="contribution" value="Oui">
+        Oui
+      </label>
+
+      <label class="option">
+        <input type="radio" name="contribution" value="Non">
+        Non
+      </label>
+
+      <label class="option">
+        <input type="radio" name="contribution" value="Selon mes possibilités">
+        Selon mes possibilités
+      </label>
+    </div>
+
+    <div class="question">
+      <label>Quelle fréquence de contribution vous conviendrait le mieux ?</label>
+
+      <label class="option">
+        <input type="radio" name="frequence" value="Chaque semaine">
+        Chaque semaine
+      </label>
+
+      <label class="option">
+        <input type="radio" name="frequence" value="Chaque mois">
+        Chaque mois
+      </label>
+
+      <label class="option">
+        <input type="radio" name="frequence" value="Selon les activités">
+        Selon les activités
+      </label>
+    </div>
+
+
+    <!-- 6. ORGANISATION -->
+
+    <h2>6. Organisation et responsabilités</h2>
+
+    <div class="question">
+      <label>Quelle fonction souhaiteriez-vous éventuellement exercer dans le groupe ?</label>
+
+      <select name="fonction">
+        <option value="">-- Choisissez une option --</option>
+        <option>Organisation</option>
+        <option>Finances</option>
+        <option>Communication</option>
+        <option>Logistique</option>
+        <option>Mobilisation</option>
+        <option>Je préfère ne pas avoir de responsabilité</option>
+        <option>Autre</option>
+      </select>
+    </div>
+
+
+    <!-- 7. FONCTIONNEMENT -->
+
+    <h2>7. Fonctionnement du groupe</h2>
+
+    <div class="question">
+      <label>Quel jour serait le plus favorable pour nos rencontres ?</label>
+
+      <select name="jour">
+        <option value="">-- Choisissez un jour --</option>
+        <option>Lundi</option>
+        <option>Mardi</option>
+        <option>Mercredi</option>
+        <option>Jeudi</option>
+        <option>Vendredi</option>
+        <option>Samedi</option>
+        <option>Dimanche</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label>Quel moyen de communication devrait être privilégié ?</label>
+
+      <label class="option">
+        <input type="checkbox" name="communication" value="WhatsApp">
+        WhatsApp
+      </label>
+
+      <label class="option">
+        <input type="checkbox" name="communication" value="Réunions">
+        Réunions physiques
+      </label>
+
+      <label class="option">
+        <input type="checkbox" name="communication" value="Appels">
+        Appels téléphoniques
+      </label>
+
+      <label class="option">
+        <input type="checkbox" name="communication" value="Autre">
+        Autre
+      </label>
+    </div>
+
+
+    <!-- 8. SUGGESTIONS -->
+
+    <h2>8. Suggestions</h2>
+
+    <div class="question">
+      <label>
+        Avez-vous une autre proposition, remarque ou idée pour améliorer notre groupe ?
+      </label>
+
+      <textarea name="suggestion" placeholder="Votre proposition..."></textarea>
+    </div>
+
+
+    <button type="submit" class="button">
+      📤 Envoyer mes réponses
+    </button>
+
+  </form>
+
+  <footer>
+    Groupe de solidarité des jeunes — Paroisse Saint Thomas
+  </footer>
+
+</div>
+
+</body>
+</html>
