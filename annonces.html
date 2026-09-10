@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Annonces - GSJ Connect</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f5;
+      color: #222;
+    }
+
+    header {
+      background: #1b5e20;
+      color: white;
+      padding: 25px 18px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin: 7px 0 0;
+      font-size: 15px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .retour {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: #1b5e20;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .annonce {
+      background: white;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .important {
+      border-left: 5px solid #d32f2f;
+    }
+
+    .normal {
+      border-left: 5px solid #1b5e20;
+    }
+
+    .annonce h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .date {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .annonce p {
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .badge-important {
+      background: #ffebee;
+      color: #c62828;
+    }
+
+    .badge-normal {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #777;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>📢 Annonces</h1>
+    <p>GSJ Connect — Paroisse Saint Thomas</p>
+  </header>
+
+  <div class="container">
+
+    <a class="retour" href="app-index.html">← Retour à l'accueil</a>
+
+    <div class="annonce important">
+      <span class="badge badge-important">IMPORTANT</span>
+      <h2>📢 Réunion du Groupe Social des Jeunes</h2>
+      <div class="date">Publié le 10 septembre 2026</div>
+
+      <p>
+        Une réunion importante du Groupe Social des Jeunes est prévue.
+        Tous les membres sont invités à prendre connaissance des informations
+        communiquées et à rester attentifs aux prochaines orientations.
+      </p>
+    </div>
+
+    <div class="annonce normal">
+      <span class="badge badge-normal">INFORMATION</span>
+      <h2>🙏🏻 Message aux membres</h2>
+      <div class="date">Publié le 10 septembre 2026</div>
+
+      <p>
+        Merci à chacun pour sa participation et son implication dans la vie
+        du groupe. Ensemble, faisons grandir cette initiative dans un esprit
+        de fraternité et de solidarité.
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    GSJ Connect — Groupe Social des Jeunes<br>
+    Paroisse Saint Thomas
+  </footer>
+
+</body>
+</html>
