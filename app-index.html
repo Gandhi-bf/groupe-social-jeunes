@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>GSJ Connect</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      background: #f4f6f5;
       color: #222;
     }
 
@@ -17,25 +22,40 @@
       background: #1b5e20;
       color: white;
       text-align: center;
-      padding: 30px 15px;
+      padding: 20px 15px 30px;
+    }
+
+    header img {
+      width: 100%;
+      max-width: 500px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
 
     header h1 {
-      margin: 0;
+      margin: 5px 0;
       font-size: 32px;
     }
 
     header p {
-      margin: 8px 0;
+      margin: 6px 0;
+      font-size: 16px;
     }
 
     .verset {
       background: white;
       margin: 20px;
-      padding: 20px;
-      border-radius: 15px;
+      padding: 22px;
+      border-radius: 18px;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+
+    .verset h3 {
+      margin-top: 0;
     }
 
     .menu {
@@ -49,23 +69,43 @@
       background: white;
       text-decoration: none;
       color: #222;
-      padding: 22px 10px;
-      border-radius: 15px;
+      padding: 20px 8px;
+      border-radius: 16px;
       text-align: center;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: bold;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      transition: 0.2s;
     }
 
     .menu a:hover {
-      transform: scale(1.03);
+      transform: translateY(-3px);
+    }
+
+    .menu .emoji {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 8px;
     }
 
     footer {
       text-align: center;
-      padding: 25px;
+      padding: 25px 15px;
       color: #666;
       font-size: 14px;
+    }
+
+    @media (min-width: 700px) {
+      .menu {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .verset {
+        max-width: 800px;
+        margin: 25px auto;
+      }
     }
   </style>
 </head>
@@ -73,48 +113,124 @@
 <body>
 
   <header>
-   <img src="IMG-2264-28-WA-0121.jpg" alt="Groupe Social des Jeunes">
 
-<h1>GSJ CONNECT</h1>
-<p>Groupe Social des Jeunes</p>
-<p>Paroisse Saint Thomas</p>
+    <img
+      src="IMG-2264-28-WA-0121.jpg"
+      alt="Groupe Social des Jeunes"
+    >
+
+    <h1>GSJ CONNECT</h1>
+    <p>Groupe Social des Jeunes</p>
+    <p>Paroisse Saint Thomas</p>
+
   </header>
 
+
   <div class="verset">
+
     <h3>🙏🏻 Parole du jour</h3>
+
     <p>
       « Il y a plus de bonheur à donner qu'à recevoir. »
     </p>
+
     <strong>Actes 20,35</strong>
+
   </div>
+
 
   <div class="menu">
 
-    <a href="#">🏠<br>Accueil</a>
-    <a href="#">👥<br>Membres</a>
+    <a href="#">
+      <span class="emoji">🏠</span>
+      Accueil
+    </a>
 
-    <a href="#">❤️<br>Œuvres sociales</a>
-    <a href="#">✝️<br>Espace spirituel</a>
+    <a href="#">
+      <span class="emoji">💬</span>
+      Discussion générale
+    </a>
 
-    <a href="#">📢<br>Annonces</a>
-    <a href="#">📅<br>Calendrier</a>
+    <a href="#">
+      <span class="emoji">🤝</span>
+      Notre Famille
+    </a>
 
-    <a href="#">💰<br>Trésorerie</a>
-    <a href="#">📚<br>Documents</a>
+    <a href="#">
+      <span class="emoji">👥</span>
+      Espace du comité
+    </a>
 
-    <a href="#">📝<br>Secrétariat</a>
-    <a href="#">⚙️<br>Fonctionnement</a>
+    <a href="#">
+      <span class="emoji">📢</span>
+      Annonces
+    </a>
 
-    <a href="#">🗳️<br>Consultations</a>
-    <a href="#">💡<br>Projets</a>
+    <a href="#">
+      <span class="emoji">📅</span>
+      Calendrier
+    </a>
 
-    <a href="#">🆘<br>Besoin d'aide</a>
-    <a href="#">🔐<br>Administration</a>
+    <a href="#">
+      <span class="emoji">❤️</span>
+      Œuvres sociales
+    </a>
+
+    <a href="#">
+      <span class="emoji">✝️</span>
+      Espace spirituel
+    </a>
+
+    <a href="#">
+      <span class="emoji">💰</span>
+      Trésorerie
+    </a>
+
+    <a href="#">
+      <span class="emoji">📚</span>
+      Documents
+    </a>
+
+    <a href="#">
+      <span class="emoji">📝</span>
+      Secrétariat
+    </a>
+
+    <a href="#">
+      <span class="emoji">⚙️</span>
+      Fonctionnement du groupe
+    </a>
+
+    <a href="#">
+      <span class="emoji">💡</span>
+      Projets & activités
+    </a>
+
+    <a href="#">
+      <span class="emoji">🗳️</span>
+      Consultations & votes
+    </a>
+
+    <a href="#">
+      <span class="emoji">🆘</span>
+      Besoin d'aide
+    </a>
+
+    <a href="#">
+      <span class="emoji">🕊️</span>
+      Historique du groupe
+    </a>
+
+    <a href="#">
+      <span class="emoji">🔐</span>
+      Administration
+    </a>
 
   </div>
 
+
   <footer>
-    GSJ Connect — Paroisse Saint Thomas
+    GSJ Connect — Groupe Social des Jeunes — Paroisse Saint Thomas
   </footer>
 
 </body>
