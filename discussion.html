@@ -1,1 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Discussion générale - GSJ Connect</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f1f4f2;
+      color: #222;
+    }
+
+    /* EN-TÊTE */
+    header {
+      background: #1b5e20;
+      color: white;
+      padding: 18px 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* CONTENU */
+    .container {
+      max-width: 750px;
+      margin: auto;
+      padding: 15px;
+      padding-bottom: 105px;
+    }
+
+    /* RETOUR */
+    .retour {
+      display: inline-block;
+      color: #1b5e20;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px 0 15px;
+    }
+
+    /* MESSAGE D'ACCUEIL */
+    .bienvenue {
+      background: white;
+      border-radius: 15px;
+      padding: 16px;
+      margin-bottom: 18px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    .bienvenue h2 {
+      margin: 0 0 7px;
+      font-size: 18px;
+      color: #1b5e20;
+    }
+
+    .bienvenue p {
+      margin: 0;
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* MESSAGE */
+    .message {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+      align-items: flex-start;
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      border-radius: 50%;
+      background: #1b5e20;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .message-content {
+      background: white;
+      padding: 11px 13px;
+      border-radius: 5px 15px 15px 15px;
+      max-width: 85%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    .nom {
+      font-weight: bold;
+      color: #1b5e20;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .texte {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .heure {
+      font-size: 11px;
+      color: #888;
+      text-align: right;
+      margin-top: 6px;
+    }
+
+    /* MESSAGE PERSONNEL */
+    .message.moi {
+      flex-direction: row-reverse;
+    }
+
+    .message.moi .message-content {
+      background: #dff2df;
+      border-radius: 15px 5px 15px 15px;
+    }
+
+    .message.moi .nom {
+      color: #145a18;
+    }
+
+    /* ZONE D'ÉCRITURE */
+    .zone-ecriture {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 10px;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.12);
+      z-index: 20;
+    }
+
+    .ecriture-interne {
+      max-width: 750px;
+      margin: auto;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .champ-message {
+      flex: 1;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      padding: 12px 16px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .champ-message:focus {
+      border-color: #1b5e20;
+    }
+
+    .bouton-envoyer {
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background: #1b5e20;
+      color: white;
+      font-size: 19px;
+      cursor: pointer;
+    }
+
+    .bouton-envoyer:active {
+      transform: scale(0.95);
+    }
+
+    /* PETIT TEXTE */
+    .information {
+      text-align: center;
+      color: #888;
+      font-size: 12px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 21px;
+      }
+
+      .message-content {
+        max-width: 82%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>💬 Discussion générale</h1>
+    <p>GSJ Connect — Groupe Social des Jeunes</p>
+  </header>
+
+  <div class="container">
+
+    <a class="retour" href="app-index.html">← Retour à l'accueil</a>
+
+    <div class="bienvenue">
+      <h2>🤝 Bienvenue dans notre espace d'échange</h2>
+      <p>
+        Un espace pour échanger, partager des informations,
+        des idées et vivre davantage la fraternité au sein du groupe.
+      </p>
+    </div>
+
+    <!-- MESSAGE 1 -->
+    <div class="message">
+      <div class="avatar">JB</div>
+
+      <div class="message-content">
+        <div class="nom">Jean-Baptiste</div>
+
+        <div class="texte">
+          Bonjour à tous ! Que la paix soit avec chacun de nous. 🙏🏻
+        </div>
+
+        <div class="heure">09:15</div>
+      </div>
+    </div>
+
+    <!-- MESSAGE 2 -->
+    <div class="message">
+      <div class="avatar">MC</div>
+
+      <div class="message-content">
+        <div class="nom">Marie-Claire</div>
+
+        <div class="texte">
+          Bonjour la famille 😊. Je suis heureuse de voir
+          que notre groupe avance petit à petit.
+        </div>
+
+        <div class="heure">09:20</div>
+      </div>
+    </div>
+
+    <!-- MESSAGE 3 -->
+    <div class="message">
+      <div class="avatar">PK</div>
+
+      <div class="message-content">
+        <div class="nom">Patrick</div>
+
+        <div class="texte">
+          J'ai une idée concernant une activité productive.
+          On pourra en discuter ensemble.
+        </div>
+
+        <div class="heure">09:27</div>
+      </div>
+    </div>
+
+    <!-- MESSAGE 4 -->
+    <div class="message moi">
+      <div class="avatar">MO</div>
+
+      <div class="message-content">
+        <div class="nom">Vous</div>
+
+        <div class="texte">
+          Très bonne idée 👍🏽. Nous pouvons la présenter
+          lors de notre prochaine réunion.
+        </div>
+
+        <div class="heure">09:31</div>
+      </div>
+    </div>
+
+    <div class="information">
+      💚 Respectons-nous les uns les autres dans nos échanges.
+    </div>
+
+  </div>
+
+  <!-- ZONE D'ÉCRITURE -->
+  <div class="zone-ecriture">
+
+    <div class="ecriture-interne">
+
+      <input
+        type="text"
+        class="champ-message"
+        placeholder="Écrire un message..."
+      >
+
+      <button
+        class="bouton-envoyer"
+        onclick="envoyerMessage()">
+        ➤
+      </button>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function envoyerMessage() {
+
+      const champ = document.querySelector(".champ-message");
+
+      const message = champ.value.trim();
+
+      if (message === "") {
+        return;
+      }
+
+      alert("Le système de discussion sera connecté prochainement. 😊");
+
+      champ.value = "";
+    }
+
+  </script>
+
+</body>
+</html>
