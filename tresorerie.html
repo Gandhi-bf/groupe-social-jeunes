@@ -1,1 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Trésorerie - GSJ Connect</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f5;
+      color: #222;
+    }
+
+    header {
+      background: #0b6b3a;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 25px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .intro,
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .intro {
+      text-align: center;
+    }
+
+    .intro h2 {
+      color: #0b6b3a;
+      margin-top: 0;
+    }
+
+    .intro p {
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .solde {
+      text-align: center;
+      background: #0b6b3a;
+      color: white;
+      border-radius: 15px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    .solde h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .solde .montant {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .card h3 {
+      color: #0b6b3a;
+      margin-top: 0;
+    }
+
+    .ligne {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .ligne:last-child {
+      border-bottom: none;
+    }
+
+    .montant-entree {
+      font-weight: bold;
+    }
+
+    .montant-sortie {
+      font-weight: bold;
+    }
+
+    .info {
+      background: #eef7f1;
+      border-left: 4px solid #0b6b3a;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 12px;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin: 25px 0;
+      color: #0b6b3a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>💰 Trésorerie</h1>
+    <p>GSJ Connect — Paroisse Saint Thomas</p>
+  </header>
+
+  <div class="container">
+
+    <div class="intro">
+      <h2>💰 Gestion financière du groupe</h2>
+      <p>
+        Cet espace permet de suivre les ressources du Groupe Social des Jeunes,
+        les dépenses effectuées et la situation financière du groupe.
+      </p>
+    </div>
+
+    <div class="solde">
+      <h2>💵 Solde actuel</h2>
+      <div class="montant">0 FC</div>
+      <p>Situation financière du groupe</p>
+    </div>
+
+    <div class="card">
+      <h3>📥 Entrées</h3>
+
+      <div class="ligne">
+        <span>Participations des membres</span>
+        <span class="montant-entree">0 FC</span>
+      </div>
+
+      <div class="ligne">
+        <span>Activités génératrices de revenus</span>
+        <span class="montant-entree">0 FC</span>
+      </div>
+
+      <div class="ligne">
+        <span>Dons et autres recettes</span>
+        <span class="montant-entree">0 FC</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📤 Dépenses</h3>
+
+      <div class="ligne">
+        <span>Œuvres sociales</span>
+        <span class="montant-sortie">0 FC</span>
+      </div>
+
+      <div class="ligne">
+        <span>Activités du groupe</span>
+        <span class="montant-sortie">0 FC</span>
+      </div>
+
+      <div class="ligne">
+        <span>Fonctionnement</span>
+        <span class="montant-sortie">0 FC</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📊 Situation financière</h3>
+
+      <div class="ligne">
+        <span>Total des entrées</span>
+        <strong>0 FC</strong>
+      </div>
+
+      <div class="ligne">
+        <span>Total des dépenses</span>
+        <strong>0 FC</strong>
+      </div>
+
+      <div class="ligne">
+        <span>Solde</span>
+        <strong>0 FC</strong>
+      </div>
+
+      <div class="info">
+        ℹ️ Les informations financières seront régulièrement mises à jour
+        afin de favoriser la transparence dans la gestion des ressources
+        du groupe.
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📅 Dernières opérations</h3>
+
+      <div class="ligne">
+        <span>Aucune opération enregistrée</span>
+        <span>—</span>
+      </div>
+    </div>
+
+    <a class="back" href="app-index.html">
+      ← Retour à GSJ Connect
+    </a>
+
+  </div>
+
+</body>
+</html>
