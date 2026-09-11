@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendrier - GSJ Connect</title>
 
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f5;
+      color: #222;
+    }
+
+    header {
+      background: #0b6b3a;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+    }
+
+    header h1 { margin: 0; }
+    header p { margin: 8px 0 0; font-size: 14px; }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .intro, .event {
+      background: white;
+      padding: 18px;
+      border-radius: 15px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    }
+
+    .intro {
+      text-align: center;
+    }
+
+    h2, h3 {
+      color: #0b6b3a;
+    }
+
+    .date {
+      color: #0b6b3a;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .event p {
+      line-height: 1.5;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin: 25px 0;
+      color: #0b6b3a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>📅 Calendrier</h1>
+  <p>GSJ Connect — Paroisse Saint Thomas</p>
+</header>
+
+<div class="container">
+
+  <div class="intro">
+    <h2>📅 Calendrier du groupe</h2>
+    <p>
+      Retrouvez ici les réunions, activités, œuvres sociales
+      et autres événements du Groupe Social des Jeunes.
+    </p>
+  </div>
+
+  <div class="event">
+    <div class="date">📅 Prochain événement</div>
+    <h3>Réunion du Groupe Social des Jeunes</h3>
+    <p>🕐 Heure : 20h30</p>
+    <p>📍 Lieu : À préciser</p>
+  </div>
+
+  <div class="event">
+    <div class="date">📅 À venir</div>
+    <h3>Aucune autre activité programmée</h3>
+    <p>Les prochaines activités seront ajoutées ici.</p>
+  </div>
+
+  <a class="back" href="app-index.html">
+    ← Retour à GSJ Connect
+  </a>
+
+</div>
+
+</body>
+</html>
