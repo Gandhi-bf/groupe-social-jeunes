@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Galerie sociale - GSJ Connect</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f5;
+      color: #222;
+    }
+
+    header {
+      background: #198754;
+      color: white;
+      text-align: center;
+      padding: 22px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px 15px 80px;
+    }
+
+    .intro {
+      background: white;
+      padding: 18px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .photo-card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+    }
+
+    .photo-placeholder {
+      height: 180px;
+      background: #e9ecef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 45px;
+    }
+
+    .photo-card p {
+      padding: 10px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      background: #198754;
+      color: white;
+      padding: 11px 17px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>📸 Galerie sociale</h1>
+  <p>Souvenirs de nos actions</p>
+</header>
+
+<div class="container">
+
+  <div class="intro">
+    <h2>📷 Nos souvenirs</h2>
+
+    <p>
+      Retrouvez ici les photos des différentes œuvres
+      sociales réalisées par le Groupe Social des Jeunes.
+    </p>
+  </div>
+
+  <div class="gallery">
+
+    <div class="photo-card">
+      <div class="photo-placeholder">📷</div>
+      <p>Action sociale — Septembre 2026</p>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-placeholder">📷</div>
+      <p>Visite et soutien</p>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-placeholder">📷</div>
+      <p>Moment de solidarité</p>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-placeholder">📷</div>
+      <p>Souvenir du groupe</p>
+    </div>
+
+  </div>
+
+  <a class="back" href="oeuvres-sociales.html">
+    ← Retour aux œuvres sociales
+  </a>
+
+</div>
+
+</body>
+</html>
